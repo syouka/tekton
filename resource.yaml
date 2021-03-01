@@ -9,3 +9,13 @@ spec:
       value: main
     - name: url
       value: https://github.com/syouka/tekton
+---
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: tekton-ci-image
+spec:
+  type: image
+  params:
+    - name: url
+      value: shouka/tekton-ci-image
